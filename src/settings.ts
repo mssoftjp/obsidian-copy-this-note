@@ -3,6 +3,8 @@ import { App, PluginSettingTab, Setting } from "obsidian";
 import { COPY_PRESETS, type CopyThisNotePresetId } from "./presets";
 import type CopyThisNotePlugin from "./main";
 
+const BUY_ME_A_COFFEE_URL = "https://buymeacoffee.com/mssoft";
+
 export interface CopyThisNoteSettings {
   enabledPresets: Record<CopyThisNotePresetId, boolean>;
   filenameHeaderIncludeExtension: boolean;
@@ -58,6 +60,21 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
             this.plugin.settings.filenameHeaderIncludeExtension = value;
             await this.plugin.saveSettings();
           })
+      );
+
+    new Setting(containerEl).setName("Support").setHeading();
+
+    new Setting(containerEl)
+      .setName("Buy me a coffee")
+      .setDesc("Support development via the buy me a coffee link.")
+      .addButton((button) =>
+        button.setButtonText("Open link").onClick(() => {
+          const anchor = document.createElement("a");
+          anchor.href = BUY_ME_A_COFFEE_URL;
+          anchor.setAttr("target", "_blank");
+          anchor.setAttr("rel", "noopener");
+          anchor.click();
+        })
       );
   }
 }
