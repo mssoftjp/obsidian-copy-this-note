@@ -5,3 +5,5 @@ build/
 main.js
 .env
 .env.local
+AGENTS.md
+spec/
