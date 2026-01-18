@@ -6,9 +6,9 @@ Copy the current note to the clipboard as Markdown, optionally including the fil
 
 - Copies the note content from the vault (saved content).
 - Provides presets you can enable/disable:
-  - include filename and frontmatter
+  - include filename and metadata (YAML frontmatter)
   - include filename
-  - include frontmatter
+  - include metadata (YAML frontmatter)
   - body only
 - Optional: include or omit the `.md` extension when adding the filename header.
 

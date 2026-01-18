@@ -20,8 +20,8 @@ export const COPY_PRESETS: readonly CopyThisNotePreset[] = [
   {
     id: "filename-frontmatter",
     commandId: "copy-note-filename-frontmatter",
-    commandName: "Include filename and frontmatter",
-    menuTitle: `${COPY_THIS_NOTE_MENU_PREFIX}: include filename, frontmatter`,
+    commandName: "Include filename and metadata",
+    menuTitle: `${COPY_THIS_NOTE_MENU_PREFIX}: include filename, metadata`,
     options: {
       includeFilename: true,
       includeFrontmatter: true,
@@ -40,8 +40,8 @@ export const COPY_PRESETS: readonly CopyThisNotePreset[] = [
   {
     id: "frontmatter-only",
     commandId: "copy-note-frontmatter-only",
-    commandName: "Include frontmatter",
-    menuTitle: `${COPY_THIS_NOTE_MENU_PREFIX}: include frontmatter`,
+    commandName: "Include metadata",
+    menuTitle: `${COPY_THIS_NOTE_MENU_PREFIX}: include metadata`,
     options: {
       includeFilename: false,
       includeFrontmatter: true,
@@ -58,4 +58,3 @@ export const COPY_PRESETS: readonly CopyThisNotePreset[] = [
     },
   },
 ];
-
