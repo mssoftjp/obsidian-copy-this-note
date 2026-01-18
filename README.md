@@ -136,7 +136,7 @@ Settings → Community plugins → Browse → search "Copy This Note" → Instal
 
 Download the latest release and copy `manifest.json` and `main.js` into:
 
-`<your vault>/.obsidian/plugins/obsidian-copy-this-note/`
+`<your vault>/.obsidian/plugins/copy-this-note/`
 
 ## Privacy & security (Obsidian policy disclosures)
 
@@ -297,7 +297,7 @@ This is the body.
 
 最新のリリースをダウンロードし、`manifest.json` と `main.js` を以下へコピーします:
 
-`<your vault>/.obsidian/plugins/obsidian-copy-this-note/`
+`<your vault>/.obsidian/plugins/copy-this-note/`
 
 ### プライバシーと安全性（ポリシー開示）
 
