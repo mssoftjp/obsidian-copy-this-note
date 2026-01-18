@@ -1,6 +1,8 @@
 import { MarkdownView, Notice, Plugin, TFile } from "obsidian";
 
+import type { CopyThisNotePayloadOptions } from "./copyThisNote";
 import { buildCopyThisNotePayload, writeToClipboard } from "./copyThisNote";
+import { COPY_PRESETS } from "./presets";
 import {
   CopyThisNoteSettingTab,
   DEFAULT_SETTINGS,
@@ -15,35 +17,43 @@ export default class CopyThisNotePlugin extends Plugin {
 
     this.addSettingTab(new CopyThisNoteSettingTab(this.app, this));
 
-    this.addCommand({
-      id: "copy-note-to-clipboard",
-      name: "Copy note to clipboard",
-      checkCallback: (checking: boolean) => {
-        const view = this.app.workspace.getActiveViewOfType(MarkdownView);
-        const file = view?.file;
-        if (!file) return false;
+    for (const preset of COPY_PRESETS) {
+      this.addCommand({
+        id: preset.commandId,
+        name: preset.commandName,
+        checkCallback: (checking: boolean) => {
+          if (!this.settings.enabledPresets[preset.id]) return false;
 
-        if (!checking) {
-          void this.copyFileToClipboard(file);
-        }
+          const view = this.app.workspace.getActiveViewOfType(MarkdownView);
+          const file = view?.file;
+          if (!file) return false;
 
-        return true;
-      },
-    });
+          if (!checking) {
+            void this.copyFileToClipboard(file, preset.options);
+          }
+
+          return true;
+        },
+      });
+    }
 
     this.registerEvent(
       this.app.workspace.on("file-menu", (menu, file) => {
         if (!(file instanceof TFile)) return;
         if (file.extension !== "md") return;
 
-        menu.addItem((item) => {
-          item
-            .setTitle("Copy note to clipboard")
-            .setIcon("copy")
-            .onClick(() => {
-              void this.copyFileToClipboard(file);
-            });
-        });
+        for (const preset of COPY_PRESETS) {
+          if (!this.settings.enabledPresets[preset.id]) continue;
+
+          menu.addItem((item) => {
+            item
+              .setTitle(preset.menuTitle)
+              .setIcon("copy")
+              .onClick(() => {
+                void this.copyFileToClipboard(file, preset.options);
+              });
+          });
+        }
       })
     );
 
@@ -53,14 +63,18 @@ export default class CopyThisNotePlugin extends Plugin {
         if (!file) return;
         if (file.extension !== "md") return;
 
-        menu.addItem((item) => {
-          item
-            .setTitle("Copy note to clipboard")
-            .setIcon("copy")
-            .onClick(() => {
-              void this.copyFileToClipboard(file);
-            });
-        });
+        for (const preset of COPY_PRESETS) {
+          if (!this.settings.enabledPresets[preset.id]) continue;
+
+          menu.addItem((item) => {
+            item
+              .setTitle(preset.menuTitle)
+              .setIcon("copy")
+              .onClick(() => {
+                void this.copyFileToClipboard(file, preset.options);
+              });
+          });
+        }
       })
     );
   }
@@ -75,13 +89,16 @@ export default class CopyThisNotePlugin extends Plugin {
     await this.saveData(this.settings);
   }
 
-  private async copyFileToClipboard(file: TFile): Promise<void> {
+  private async copyFileToClipboard(
+    file: TFile,
+    options: CopyThisNotePayloadOptions
+  ): Promise<void> {
     try {
       const fileContent = await this.app.vault.cachedRead(file);
       const payload = buildCopyThisNotePayload({
-        fileName: file.name,
+        fileName: this.getFilenameHeader(file),
         fileContent,
-        options: this.settings,
+        options,
       });
 
       await writeToClipboard(payload);
@@ -98,14 +115,48 @@ export default class CopyThisNotePlugin extends Plugin {
     const record = data as Record<string, unknown>;
     const parsed: Partial<CopyThisNoteSettings> = {};
 
-    if (typeof record.includeFilename === "boolean") {
-      parsed.includeFilename = record.includeFilename;
+    const enabledPresets: Partial<CopyThisNoteSettings["enabledPresets"]> = {};
+
+    if (record.enabledPresets && typeof record.enabledPresets === "object") {
+      const presetsRecord = record.enabledPresets as Record<string, unknown>;
+      for (const preset of COPY_PRESETS) {
+        const value = presetsRecord[preset.id];
+        if (typeof value === "boolean") {
+          enabledPresets[preset.id] = value;
+        }
+      }
+    } else {
+      const includeFilename = record.includeFilename;
+      const includeFrontmatter = record.includeFrontmatter;
+      if (
+        typeof includeFilename === "boolean" &&
+        typeof includeFrontmatter === "boolean"
+      ) {
+        enabledPresets["filename-frontmatter"] =
+          includeFilename && includeFrontmatter;
+        enabledPresets["filename-only"] = includeFilename && !includeFrontmatter;
+        enabledPresets["frontmatter-only"] =
+          !includeFilename && includeFrontmatter;
+        enabledPresets["body-only"] = !includeFilename && !includeFrontmatter;
+      }
     }
 
-    if (typeof record.includeFrontmatter === "boolean") {
-      parsed.includeFrontmatter = record.includeFrontmatter;
+    if (Object.keys(enabledPresets).length > 0) {
+      parsed.enabledPresets = {
+        ...DEFAULT_SETTINGS.enabledPresets,
+        ...enabledPresets,
+      };
+    }
+
+    if (typeof record.filenameHeaderIncludeExtension === "boolean") {
+      parsed.filenameHeaderIncludeExtension = record.filenameHeaderIncludeExtension;
     }
 
     return parsed;
+  }
+
+  private getFilenameHeader(file: TFile): string {
+    if (this.settings.filenameHeaderIncludeExtension) return file.name;
+    return file.basename;
   }
 }

@@ -5,12 +5,15 @@ Copy the current note to the clipboard as Markdown, optionally including the fil
 ## What it does
 
 - Copies the note content from the vault (saved content).
-- Optional: include filename as the first line.
-- Optional: include YAML frontmatter.
+- Provides presets you can enable/disable:
+  - include filename and frontmatter
+  - include filename
+  - include frontmatter
+  - body only
+- Optional: include or omit the `.md` extension when adding the filename header.
 
 ## Privacy and security
 
 - No network access
 - No telemetry
 - No external file system access (reads only from the current vault via the Obsidian API)
-
