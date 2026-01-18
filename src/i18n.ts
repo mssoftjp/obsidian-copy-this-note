@@ -279,7 +279,7 @@ const translations = {
       "Dosya adını eklerken uzantıyı koru (örneğin, .md).",
     "settings.supportMessage":
       "Bu eklenti işe yaradıysa geliştirmeyi desteklemeyi düşünün:",
-    "settings.supportImageAlt": "Copy This Note'u Buy Me a Coffee üzerinden destekle",
+    "settings.supportImageAlt": "Buy Me a Coffee üzerinden Copy This Note için destek ol",
 
     "notice.copied": "Kopyalandı",
     "notice.copyFailed": "Panoya kopyalanamadı.",
