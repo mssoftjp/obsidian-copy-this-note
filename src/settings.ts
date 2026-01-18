@@ -1,9 +1,15 @@
 import { App, PluginSettingTab, Setting } from "obsidian";
 
 import { COPY_PRESETS, type CopyThisNotePresetId } from "./presets";
+import { BUY_ME_A_COFFEE_DEFAULT_BUTTON } from "./assets/supportImages";
 import type CopyThisNotePlugin from "./main";
 
 const BUY_ME_A_COFFEE_URL = "https://buymeacoffee.com/mssoft";
+const BUY_ME_A_COFFEE_IMAGE_WIDTH = "217";
+const BUY_ME_A_COFFEE_IMAGE_HEIGHT = "60";
+const SUPPORT_MESSAGE =
+  "このプラグインが役に立ちましたら、開発継続のためにご支援をお願いいたします：";
+const SUPPORT_IMAGE_ALT = "Buy Me a Coffee で Copy This Note を支援";
 
 export interface CopyThisNoteSettings {
   enabledPresets: Record<CopyThisNotePresetId, boolean>;
@@ -31,11 +37,13 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
   display(): void {
     const { containerEl } = this;
     containerEl.empty();
+    containerEl.addClass("copy-this-note-settings");
 
-    new Setting(containerEl).setName("Presets").setHeading();
-
+    new Setting(containerEl).setName("Enable copy commands").setHeading();
+    const presetsGroup = containerEl.createDiv("ctn-settings-group");
     for (const preset of COPY_PRESETS) {
-      new Setting(containerEl)
+      new Setting(presetsGroup)
+        .setClass("ctn-settings-group-item")
         .setName(preset.commandName)
         .setDesc("Show this preset in the command palette and context menus.")
         .addToggle((toggle) =>
@@ -61,20 +69,36 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
             await this.plugin.saveSettings();
           })
       );
+    this.displaySupportBanner(containerEl);
+  }
 
-    new Setting(containerEl).setName("Support").setHeading();
+  private displaySupportBanner(containerEl: HTMLElement): void {
+    try {
+      containerEl.createEl("div", { cls: "bmc-spacer" });
 
-    new Setting(containerEl)
-      .setName("Buy me a coffee")
-      .setDesc("Support development via the buy me a coffee link.")
-      .addButton((button) =>
-        button.setButtonText("Open link").onClick(() => {
-          const anchor = document.createElement("a");
-          anchor.href = BUY_ME_A_COFFEE_URL;
-          anchor.setAttr("target", "_blank");
-          anchor.setAttr("rel", "noopener");
-          anchor.click();
-        })
-      );
+      const supportSection = containerEl.createDiv("bmc-support-section");
+
+      supportSection.createEl("p", {
+        text: SUPPORT_MESSAGE,
+        cls: "bmc-support-message",
+      });
+
+      const banner = supportSection.createEl("a", {
+        href: BUY_ME_A_COFFEE_URL,
+        attr: { target: "_blank", rel: "noopener" },
+        cls: "bmc-banner",
+      });
+
+      banner.createEl("img", {
+        attr: {
+          src: BUY_ME_A_COFFEE_DEFAULT_BUTTON,
+          alt: SUPPORT_IMAGE_ALT,
+          width: BUY_ME_A_COFFEE_IMAGE_WIDTH,
+          height: BUY_ME_A_COFFEE_IMAGE_HEIGHT,
+        },
+      });
+    } catch (error) {
+      console.warn("Failed to display support banner:", error);
+    }
   }
 }

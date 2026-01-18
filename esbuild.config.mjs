@@ -96,6 +96,9 @@ const options = {
 
 await fs.mkdir("dist", { recursive: true });
 await fs.copyFile("manifest.json", "dist/manifest.json");
+if (await fileExists("styles.css")) {
+  await fs.copyFile("styles.css", "dist/styles.css");
+}
 
 if (isWatch) {
   const ctx = await esbuild.context(options);
