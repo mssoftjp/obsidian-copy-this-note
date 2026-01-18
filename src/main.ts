@@ -2,6 +2,7 @@ import { MarkdownView, Notice, Plugin, TFile } from "obsidian";
 
 import type { CopyThisNotePayloadOptions } from "./copyThisNote";
 import { buildCopyThisNotePayload, writeToClipboard } from "./copyThisNote";
+import { t } from "./i18n";
 import { COPY_PRESETS } from "./presets";
 import {
   CopyThisNoteSettingTab,
@@ -20,7 +21,7 @@ export default class CopyThisNotePlugin extends Plugin {
     for (const preset of COPY_PRESETS) {
       this.addCommand({
         id: preset.commandId,
-        name: preset.commandName,
+        name: t(preset.commandNameKey),
         checkCallback: (checking: boolean) => {
           if (!this.settings.enabledPresets[preset.id]) return false;
 
@@ -47,7 +48,7 @@ export default class CopyThisNotePlugin extends Plugin {
 
           menu.addItem((item) => {
             item
-              .setTitle(preset.menuTitle)
+              .setTitle(t(preset.menuTitleKey))
               .setIcon("copy")
               .onClick(() => {
                 void this.copyFileToClipboard(file, preset.options);
@@ -68,7 +69,7 @@ export default class CopyThisNotePlugin extends Plugin {
 
           menu.addItem((item) => {
             item
-              .setTitle(preset.menuTitle)
+              .setTitle(t(preset.menuTitleKey))
               .setIcon("copy")
               .onClick(() => {
                 void this.copyFileToClipboard(file, preset.options);
@@ -102,10 +103,10 @@ export default class CopyThisNotePlugin extends Plugin {
       });
 
       await writeToClipboard(payload);
-      new Notice("Copied");
+      new Notice(t("notice.copied"));
     } catch (error) {
       console.error(error);
-      new Notice("Failed to copy to clipboard.");
+      new Notice(t("notice.copyFailed"));
     }
   }
 

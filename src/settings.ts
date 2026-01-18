@@ -2,14 +2,12 @@ import { App, PluginSettingTab, Setting } from "obsidian";
 
 import { COPY_PRESETS, type CopyThisNotePresetId } from "./presets";
 import { BUY_ME_A_COFFEE_DEFAULT_BUTTON } from "./assets/supportImages";
+import { t } from "./i18n";
 import type CopyThisNotePlugin from "./main";
 
 const BUY_ME_A_COFFEE_URL = "https://buymeacoffee.com/mssoft";
 const BUY_ME_A_COFFEE_IMAGE_WIDTH = "217";
 const BUY_ME_A_COFFEE_IMAGE_HEIGHT = "60";
-const SUPPORT_MESSAGE =
-  "このプラグインが役に立ちましたら、開発継続のためにご支援をお願いいたします：";
-const SUPPORT_IMAGE_ALT = "Buy Me a Coffee で Copy This Note を支援";
 
 export interface CopyThisNoteSettings {
   enabledPresets: Record<CopyThisNotePresetId, boolean>;
@@ -39,13 +37,13 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
     containerEl.empty();
     containerEl.addClass("copy-this-note-settings");
 
-    new Setting(containerEl).setName("Enable copy commands").setHeading();
+    new Setting(containerEl).setName(t("settings.enableCopyCommands")).setHeading();
     const presetsGroup = containerEl.createDiv("ctn-settings-group");
     for (const preset of COPY_PRESETS) {
       new Setting(presetsGroup)
         .setClass("ctn-settings-group-item")
-        .setName(preset.commandName)
-        .setDesc("Show this preset in the command palette and context menus.")
+        .setName(t(preset.commandNameKey))
+        .setDesc(t("settings.presetDescription"))
         .addToggle((toggle) =>
           toggle
             .setValue(this.plugin.settings.enabledPresets[preset.id])
@@ -56,11 +54,11 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
         );
     }
 
-    new Setting(containerEl).setName("Filename header").setHeading();
+    new Setting(containerEl).setName(t("settings.filenameHeader")).setHeading();
 
     new Setting(containerEl)
-      .setName("Include file extension")
-      .setDesc("When including the filename, keep the file extension (for example, .md).")
+      .setName(t("settings.includeFileExtension"))
+      .setDesc(t("settings.includeFileExtensionDescription"))
       .addToggle((toggle) =>
         toggle
           .setValue(this.plugin.settings.filenameHeaderIncludeExtension)
@@ -79,7 +77,7 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
       const supportSection = containerEl.createDiv("bmc-support-section");
 
       supportSection.createEl("p", {
-        text: SUPPORT_MESSAGE,
+        text: t("settings.supportMessage"),
         cls: "bmc-support-message",
       });
 
@@ -92,7 +90,7 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
       banner.createEl("img", {
         attr: {
           src: BUY_ME_A_COFFEE_DEFAULT_BUTTON,
-          alt: SUPPORT_IMAGE_ALT,
+          alt: t("settings.supportImageAlt"),
           width: BUY_ME_A_COFFEE_IMAGE_WIDTH,
           height: BUY_ME_A_COFFEE_IMAGE_HEIGHT,
         },

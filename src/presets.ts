@@ -1,4 +1,5 @@
 import type { CopyThisNotePayloadOptions } from "./copyThisNote";
+import type { CommandI18nKey, MenuI18nKey } from "./i18n";
 
 export type CopyThisNotePresetId =
   | "filename-frontmatter"
@@ -9,19 +10,17 @@ export type CopyThisNotePresetId =
 export interface CopyThisNotePreset {
   id: CopyThisNotePresetId;
   commandId: string;
-  commandName: string;
-  menuTitle: string;
+  commandNameKey: CommandI18nKey;
+  menuTitleKey: MenuI18nKey;
   options: CopyThisNotePayloadOptions;
 }
-
-export const COPY_THIS_NOTE_MENU_PREFIX = "Copy This Note";
 
 export const COPY_PRESETS: readonly CopyThisNotePreset[] = [
   {
     id: "filename-frontmatter",
     commandId: "copy-note-filename-frontmatter",
-    commandName: "Include filename and metadata",
-    menuTitle: `${COPY_THIS_NOTE_MENU_PREFIX}: include filename, metadata`,
+    commandNameKey: "command.includeFilenameAndMetadata",
+    menuTitleKey: "menu.includeFilenameAndMetadata",
     options: {
       includeFilename: true,
       includeFrontmatter: true,
@@ -30,8 +29,8 @@ export const COPY_PRESETS: readonly CopyThisNotePreset[] = [
   {
     id: "filename-only",
     commandId: "copy-note-filename-only",
-    commandName: "Include filename",
-    menuTitle: `${COPY_THIS_NOTE_MENU_PREFIX}: include filename`,
+    commandNameKey: "command.includeFilename",
+    menuTitleKey: "menu.includeFilename",
     options: {
       includeFilename: true,
       includeFrontmatter: false,
@@ -40,8 +39,8 @@ export const COPY_PRESETS: readonly CopyThisNotePreset[] = [
   {
     id: "frontmatter-only",
     commandId: "copy-note-frontmatter-only",
-    commandName: "Include metadata",
-    menuTitle: `${COPY_THIS_NOTE_MENU_PREFIX}: include metadata`,
+    commandNameKey: "command.includeMetadata",
+    menuTitleKey: "menu.includeMetadata",
     options: {
       includeFilename: false,
       includeFrontmatter: true,
@@ -50,8 +49,8 @@ export const COPY_PRESETS: readonly CopyThisNotePreset[] = [
   {
     id: "body-only",
     commandId: "copy-note-body-only",
-    commandName: "Body only",
-    menuTitle: `${COPY_THIS_NOTE_MENU_PREFIX}: body only`,
+    commandNameKey: "command.bodyOnly",
+    menuTitleKey: "menu.bodyOnly",
     options: {
       includeFilename: false,
       includeFrontmatter: false,
