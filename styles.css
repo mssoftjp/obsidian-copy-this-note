@@ -7,6 +7,11 @@
   overflow: hidden;
 }
 
+.copy-this-note-settings .ctn-settings-preset-description {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
 .copy-this-note-settings .ctn-settings-group .ctn-settings-group-item {
   background-color: transparent;
   border: none;

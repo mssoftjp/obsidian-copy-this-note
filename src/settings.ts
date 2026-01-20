@@ -38,12 +38,15 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
     containerEl.addClass("copy-this-note-settings");
 
     new Setting(containerEl).setName(t("settings.enableCopyCommands")).setHeading();
+    containerEl.createEl("p", {
+      text: t("settings.presetDescription"),
+      cls: "setting-item-description ctn-settings-preset-description",
+    });
     const presetsGroup = containerEl.createDiv("ctn-settings-group");
     for (const preset of COPY_PRESETS) {
       new Setting(presetsGroup)
         .setClass("ctn-settings-group-item")
         .setName(t(preset.commandNameKey))
-        .setDesc(t("settings.presetDescription"))
         .addToggle((toggle) =>
           toggle
             .setValue(this.plugin.settings.enabledPresets[preset.id])

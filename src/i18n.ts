@@ -31,7 +31,7 @@ const en = {
 
   "settings.enableCopyCommands": "Enable copy commands",
   "settings.presetDescription":
-    "Show this preset in the command palette and context menus.",
+    "Enabled commands appear in the command palette and context menus.",
   "settings.filenameHeader": "Filename header",
   "settings.includeFileExtension": "Include file extension",
   "settings.includeFileExtensionDescription":
@@ -65,7 +65,7 @@ const translations = {
 
     "settings.enableCopyCommands": "コピーコマンドを有効にする",
     "settings.presetDescription":
-      "このプリセットをコマンドパレットとコンテキストメニューに表示します。",
+      "有効にしたコマンドは、コマンドパレットとコンテキストメニューに表示されます。",
     "settings.filenameHeader": "ファイル名ヘッダー",
     "settings.includeFileExtension": "拡張子を含める",
     "settings.includeFileExtensionDescription":
@@ -91,7 +91,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Habilitar comandos de copia",
     "settings.presetDescription":
-      "Mostrar este preset en la paleta de comandos y los menús contextuales.",
+      "Los comandos habilitados aparecen en la paleta de comandos y en los menús contextuales.",
     "settings.filenameHeader": "Encabezado del nombre de archivo",
     "settings.includeFileExtension": "Incluir extensión de archivo",
     "settings.includeFileExtensionDescription":
@@ -117,7 +117,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Kopierbefehle aktivieren",
     "settings.presetDescription":
-      "Dieses Preset in der Befehlspalette und in Kontextmenüs anzeigen.",
+      "Aktivierte Befehle werden in der Befehlspalette und in Kontextmenüs angezeigt.",
     "settings.filenameHeader": "Dateiname-Header",
     "settings.includeFileExtension": "Dateiendung einschließen",
     "settings.includeFileExtensionDescription":
@@ -144,7 +144,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Activer les commandes de copie",
     "settings.presetDescription":
-      "Afficher ce préréglage dans la palette de commandes et les menus contextuels.",
+      "Les commandes activées apparaissent dans la palette de commandes et les menus contextuels.",
     "settings.filenameHeader": "En-tête du nom de fichier",
     "settings.includeFileExtension": "Inclure l’extension du fichier",
     "settings.includeFileExtensionDescription":
@@ -170,7 +170,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Ativar comandos de cópia",
     "settings.presetDescription":
-      "Mostrar este preset na paleta de comandos e nos menus de contexto.",
+      "Os comandos ativados aparecem na paleta de comandos e nos menus de contexto.",
     "settings.filenameHeader": "Cabeçalho do nome do arquivo",
     "settings.includeFileExtension": "Incluir extensão do arquivo",
     "settings.includeFileExtensionDescription":
@@ -195,7 +195,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Включить команды копирования",
     "settings.presetDescription":
-      "Показывать этот пресет в палитре команд и контекстных меню.",
+      "Включенные команды отображаются в палитре команд и в контекстных меню.",
     "settings.filenameHeader": "Заголовок имени файла",
     "settings.includeFileExtension": "Включать расширение файла",
     "settings.includeFileExtensionDescription":
@@ -220,7 +220,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Abilita comandi di copia",
     "settings.presetDescription":
-      "Mostra questo preset nella palette comandi e nei menu contestuali.",
+      "I comandi abilitati compaiono nella palette comandi e nei menu contestuali.",
     "settings.filenameHeader": "Intestazione del nome file",
     "settings.includeFileExtension": "Includi estensione del file",
     "settings.includeFileExtensionDescription":
@@ -246,7 +246,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Włącz polecenia kopiowania",
     "settings.presetDescription":
-      "Pokaż ten preset w palecie poleceń i menu kontekstowych.",
+      "Włączone polecenia pojawią się w palecie poleceń i menu kontekstowych.",
     "settings.filenameHeader": "Nagłówek nazwy pliku",
     "settings.includeFileExtension": "Uwzględnij rozszerzenie pliku",
     "settings.includeFileExtensionDescription":
@@ -272,7 +272,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Kopyalama komutlarını etkinleştir",
     "settings.presetDescription":
-      "Bu ön ayarı komut paletinde ve bağlam menülerinde göster.",
+      "Etkinleştirilen komutlar komut paletinde ve bağlam menülerinde görünür.",
     "settings.filenameHeader": "Dosya adı başlığı",
     "settings.includeFileExtension": "Dosya uzantısını dahil et",
     "settings.includeFileExtensionDescription":
@@ -296,7 +296,7 @@ const translations = {
     "menu.bodyOnly": "Copy This Note: 仅正文",
 
     "settings.enableCopyCommands": "启用复制命令",
-    "settings.presetDescription": "在命令面板和上下文菜单中显示此预设。",
+    "settings.presetDescription": "启用的命令会显示在命令面板和上下文菜单中。",
     "settings.filenameHeader": "文件名标题",
     "settings.includeFileExtension": "包含文件扩展名",
     "settings.includeFileExtensionDescription":
@@ -319,7 +319,7 @@ const translations = {
     "menu.bodyOnly": "Copy This Note: 僅內文",
 
     "settings.enableCopyCommands": "啟用複製命令",
-    "settings.presetDescription": "在命令面板與右鍵選單中顯示此預設。",
+    "settings.presetDescription": "啟用的命令會顯示在命令面板與右鍵選單中。",
     "settings.filenameHeader": "檔名標題",
     "settings.includeFileExtension": "包含檔案副檔名",
     "settings.includeFileExtensionDescription":
@@ -343,7 +343,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Bật lệnh sao chép",
     "settings.presetDescription":
-      "Hiển thị preset này trong bảng lệnh và menu ngữ cảnh.",
+      "Các lệnh đã bật sẽ xuất hiện trong bảng lệnh và menu ngữ cảnh.",
     "settings.filenameHeader": "Tiêu đề tên tệp",
     "settings.includeFileExtension": "Bao gồm phần mở rộng tệp",
     "settings.includeFileExtensionDescription":
@@ -368,7 +368,7 @@ const translations = {
 
     "settings.enableCopyCommands": "Aktifkan perintah salin",
     "settings.presetDescription":
-      "Tampilkan preset ini di palet perintah dan menu konteks.",
+      "Perintah yang diaktifkan akan muncul di palet perintah dan menu konteks.",
     "settings.filenameHeader": "Header nama file",
     "settings.includeFileExtension": "Sertakan ekstensi file",
     "settings.includeFileExtensionDescription":
@@ -393,7 +393,7 @@ const translations = {
 
     "settings.enableCopyCommands": "복사 명령 사용",
     "settings.presetDescription":
-      "이 프리셋을 명령 팔레트와 컨텍스트 메뉴에 표시합니다.",
+      "활성화한 명령은 명령 팔레트와 컨텍스트 메뉴에 표시됩니다.",
     "settings.filenameHeader": "파일 이름 헤더",
     "settings.includeFileExtension": "파일 확장자 포함",
     "settings.includeFileExtensionDescription":
@@ -417,7 +417,8 @@ const translations = {
     "menu.bodyOnly": "Copy This Note: เฉพาะเนื้อหา",
 
     "settings.enableCopyCommands": "เปิดใช้คำสั่งคัดลอก",
-    "settings.presetDescription": "แสดงพรีเซ็ตนี้ในพาเล็ตคำสั่งและเมนูบริบท",
+    "settings.presetDescription":
+      "คำสั่งที่เปิดใช้งานจะปรากฏในพาเล็ตคำสั่งและเมนูบริบท",
     "settings.filenameHeader": "ส่วนหัวชื่อไฟล์",
     "settings.includeFileExtension": "รวมส่วนขยายไฟล์",
     "settings.includeFileExtensionDescription":
