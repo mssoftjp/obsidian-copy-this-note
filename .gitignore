@@ -2,6 +2,7 @@
 node_modules/
 dist/
 build/
+/releases/
 /main.js
 .env
 .env.local
