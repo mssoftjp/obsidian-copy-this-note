@@ -9,7 +9,7 @@ const tsconfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig([
   {
-    ignores: ["node_modules/**", "dist/**", "build/**"],
+    ignores: ["node_modules/**", "dist/**", "build/**", "releases/**"],
   },
   {
     files: ["esbuild.config.mjs"],
