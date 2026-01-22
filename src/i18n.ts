@@ -24,10 +24,11 @@ const en = {
   "command.includeMetadata": "Include metadata",
   "command.bodyOnly": "Body only",
 
-  "menu.includeFilenameAndMetadata": "Copy This Note: include filename, metadata",
-  "menu.includeFilename": "Copy This Note: include filename",
-  "menu.includeMetadata": "Copy This Note: include metadata",
-  "menu.bodyOnly": "Copy This Note: body only",
+  "menu.includeFilenameAndMetadata":
+    "Copy this note: include filename and metadata",
+  "menu.includeFilename": "Copy this note: include filename",
+  "menu.includeMetadata": "Copy this note: include metadata",
+  "menu.bodyOnly": "Copy this note: body only",
 
   "settings.enableCopyCommands": "Enable copy commands",
   "settings.presetDescription":
@@ -58,10 +59,10 @@ const translations = {
     "command.includeMetadata": "メタデータを含める",
     "command.bodyOnly": "本文のみ",
 
-    "menu.includeFilenameAndMetadata": "Copy This Note: ファイル名とメタデータを含める",
-    "menu.includeFilename": "Copy This Note: ファイル名を含める",
-    "menu.includeMetadata": "Copy This Note: メタデータを含める",
-    "menu.bodyOnly": "Copy This Note: 本文のみ",
+    "menu.includeFilenameAndMetadata": "Copy this note: ファイル名とメタデータを含める",
+    "menu.includeFilename": "Copy this note: ファイル名を含める",
+    "menu.includeMetadata": "Copy this note: メタデータを含める",
+    "menu.bodyOnly": "Copy this note: 本文のみ",
 
     "settings.enableCopyCommands": "コピーコマンドを有効にする",
     "settings.presetDescription":
@@ -84,10 +85,10 @@ const translations = {
     "command.bodyOnly": "Solo cuerpo",
 
     "menu.includeFilenameAndMetadata":
-      "Copy This Note: incluir nombre de archivo y metadatos",
-    "menu.includeFilename": "Copy This Note: incluir nombre de archivo",
-    "menu.includeMetadata": "Copy This Note: incluir metadatos",
-    "menu.bodyOnly": "Copy This Note: solo cuerpo",
+      "Copy this note: incluir nombre de archivo y metadatos",
+    "menu.includeFilename": "Copy this note: incluir nombre de archivo",
+    "menu.includeMetadata": "Copy this note: incluir metadatos",
+    "menu.bodyOnly": "Copy this note: solo cuerpo",
 
     "settings.enableCopyCommands": "Habilitar comandos de copia",
     "settings.presetDescription":
@@ -110,10 +111,10 @@ const translations = {
     "command.bodyOnly": "Nur Inhalt",
 
     "menu.includeFilenameAndMetadata":
-      "Copy This Note: Dateiname und Metadaten einschließen",
-    "menu.includeFilename": "Copy This Note: Dateiname einschließen",
-    "menu.includeMetadata": "Copy This Note: Metadaten einschließen",
-    "menu.bodyOnly": "Copy This Note: nur Inhalt",
+      "Copy this note: Dateiname und Metadaten einschließen",
+    "menu.includeFilename": "Copy this note: Dateiname einschließen",
+    "menu.includeMetadata": "Copy this note: Metadaten einschließen",
+    "menu.bodyOnly": "Copy this note: nur Inhalt",
 
     "settings.enableCopyCommands": "Kopierbefehle aktivieren",
     "settings.presetDescription":
@@ -137,10 +138,10 @@ const translations = {
     "command.bodyOnly": "Corps uniquement",
 
     "menu.includeFilenameAndMetadata":
-      "Copy This Note: inclure le nom de fichier et les métadonnées",
-    "menu.includeFilename": "Copy This Note: inclure le nom de fichier",
-    "menu.includeMetadata": "Copy This Note: inclure les métadonnées",
-    "menu.bodyOnly": "Copy This Note: corps uniquement",
+      "Copy this note: inclure le nom de fichier et les métadonnées",
+    "menu.includeFilename": "Copy this note: inclure le nom de fichier",
+    "menu.includeMetadata": "Copy this note: inclure les métadonnées",
+    "menu.bodyOnly": "Copy this note: corps uniquement",
 
     "settings.enableCopyCommands": "Activer les commandes de copie",
     "settings.presetDescription":
@@ -163,10 +164,10 @@ const translations = {
     "command.bodyOnly": "Apenas corpo",
 
     "menu.includeFilenameAndMetadata":
-      "Copy This Note: incluir nome do arquivo e metadados",
-    "menu.includeFilename": "Copy This Note: incluir nome do arquivo",
-    "menu.includeMetadata": "Copy This Note: incluir metadados",
-    "menu.bodyOnly": "Copy This Note: apenas corpo",
+      "Copy this note: incluir nome do arquivo e metadados",
+    "menu.includeFilename": "Copy this note: incluir nome do arquivo",
+    "menu.includeMetadata": "Copy this note: incluir metadados",
+    "menu.bodyOnly": "Copy this note: apenas corpo",
 
     "settings.enableCopyCommands": "Ativar comandos de cópia",
     "settings.presetDescription":
@@ -188,10 +189,10 @@ const translations = {
     "command.includeMetadata": "Включить метаданные",
     "command.bodyOnly": "Только содержимое",
 
-    "menu.includeFilenameAndMetadata": "Copy This Note: включить имя файла и метаданные",
-    "menu.includeFilename": "Copy This Note: включить имя файла",
-    "menu.includeMetadata": "Copy This Note: включить метаданные",
-    "menu.bodyOnly": "Copy This Note: только содержимое",
+    "menu.includeFilenameAndMetadata": "Copy this note: включить имя файла и метаданные",
+    "menu.includeFilename": "Copy this note: включить имя файла",
+    "menu.includeMetadata": "Copy this note: включить метаданные",
+    "menu.bodyOnly": "Copy this note: только содержимое",
 
     "settings.enableCopyCommands": "Включить команды копирования",
     "settings.presetDescription":
@@ -213,10 +214,10 @@ const translations = {
     "command.includeMetadata": "Includi metadati",
     "command.bodyOnly": "Solo contenuto",
 
-    "menu.includeFilenameAndMetadata": "Copy This Note: includi nome file e metadati",
-    "menu.includeFilename": "Copy This Note: includi nome file",
-    "menu.includeMetadata": "Copy This Note: includi metadati",
-    "menu.bodyOnly": "Copy This Note: solo contenuto",
+    "menu.includeFilenameAndMetadata": "Copy this note: includi nome file e metadati",
+    "menu.includeFilename": "Copy this note: includi nome file",
+    "menu.includeMetadata": "Copy this note: includi metadati",
+    "menu.bodyOnly": "Copy this note: solo contenuto",
 
     "settings.enableCopyCommands": "Abilita comandi di copia",
     "settings.presetDescription":
@@ -239,10 +240,10 @@ const translations = {
     "command.bodyOnly": "Tylko treść",
 
     "menu.includeFilenameAndMetadata":
-      "Copy This Note: uwzględnij nazwę pliku i metadane",
-    "menu.includeFilename": "Copy This Note: uwzględnij nazwę pliku",
-    "menu.includeMetadata": "Copy This Note: uwzględnij metadane",
-    "menu.bodyOnly": "Copy This Note: tylko treść",
+      "Copy this note: uwzględnij nazwę pliku i metadane",
+    "menu.includeFilename": "Copy this note: uwzględnij nazwę pliku",
+    "menu.includeMetadata": "Copy this note: uwzględnij metadane",
+    "menu.bodyOnly": "Copy this note: tylko treść",
 
     "settings.enableCopyCommands": "Włącz polecenia kopiowania",
     "settings.presetDescription":
@@ -265,10 +266,10 @@ const translations = {
     "command.bodyOnly": "Yalnızca içerik",
 
     "menu.includeFilenameAndMetadata":
-      "Copy This Note: dosya adı ve meta verileri dahil et",
-    "menu.includeFilename": "Copy This Note: dosya adını dahil et",
-    "menu.includeMetadata": "Copy This Note: meta verileri dahil et",
-    "menu.bodyOnly": "Copy This Note: yalnızca içerik",
+      "Copy this note: dosya adı ve meta verileri dahil et",
+    "menu.includeFilename": "Copy this note: dosya adını dahil et",
+    "menu.includeMetadata": "Copy this note: meta verileri dahil et",
+    "menu.bodyOnly": "Copy this note: yalnızca içerik",
 
     "settings.enableCopyCommands": "Kopyalama komutlarını etkinleştir",
     "settings.presetDescription":
@@ -290,10 +291,10 @@ const translations = {
     "command.includeMetadata": "包含元数据",
     "command.bodyOnly": "仅正文",
 
-    "menu.includeFilenameAndMetadata": "Copy This Note: 包含文件名和元数据",
-    "menu.includeFilename": "Copy This Note: 包含文件名",
-    "menu.includeMetadata": "Copy This Note: 包含元数据",
-    "menu.bodyOnly": "Copy This Note: 仅正文",
+    "menu.includeFilenameAndMetadata": "Copy this note: 包含文件名和元数据",
+    "menu.includeFilename": "Copy this note: 包含文件名",
+    "menu.includeMetadata": "Copy this note: 包含元数据",
+    "menu.bodyOnly": "Copy this note: 仅正文",
 
     "settings.enableCopyCommands": "启用复制命令",
     "settings.presetDescription": "启用的命令会显示在命令面板和上下文菜单中。",
@@ -313,10 +314,10 @@ const translations = {
     "command.includeMetadata": "包含中繼資料",
     "command.bodyOnly": "僅內文",
 
-    "menu.includeFilenameAndMetadata": "Copy This Note: 包含檔名與中繼資料",
-    "menu.includeFilename": "Copy This Note: 包含檔名",
-    "menu.includeMetadata": "Copy This Note: 包含中繼資料",
-    "menu.bodyOnly": "Copy This Note: 僅內文",
+    "menu.includeFilenameAndMetadata": "Copy this note: 包含檔名與中繼資料",
+    "menu.includeFilename": "Copy this note: 包含檔名",
+    "menu.includeMetadata": "Copy this note: 包含中繼資料",
+    "menu.bodyOnly": "Copy this note: 僅內文",
 
     "settings.enableCopyCommands": "啟用複製命令",
     "settings.presetDescription": "啟用的命令會顯示在命令面板與右鍵選單中。",
@@ -336,10 +337,10 @@ const translations = {
     "command.includeMetadata": "Bao gồm siêu dữ liệu",
     "command.bodyOnly": "Chỉ nội dung",
 
-    "menu.includeFilenameAndMetadata": "Copy This Note: bao gồm tên tệp và siêu dữ liệu",
-    "menu.includeFilename": "Copy This Note: bao gồm tên tệp",
-    "menu.includeMetadata": "Copy This Note: bao gồm siêu dữ liệu",
-    "menu.bodyOnly": "Copy This Note: chỉ nội dung",
+    "menu.includeFilenameAndMetadata": "Copy this note: bao gồm tên tệp và siêu dữ liệu",
+    "menu.includeFilename": "Copy this note: bao gồm tên tệp",
+    "menu.includeMetadata": "Copy this note: bao gồm siêu dữ liệu",
+    "menu.bodyOnly": "Copy this note: chỉ nội dung",
 
     "settings.enableCopyCommands": "Bật lệnh sao chép",
     "settings.presetDescription":
@@ -361,10 +362,10 @@ const translations = {
     "command.includeMetadata": "Sertakan metadata",
     "command.bodyOnly": "Hanya isi",
 
-    "menu.includeFilenameAndMetadata": "Copy This Note: sertakan nama file dan metadata",
-    "menu.includeFilename": "Copy This Note: sertakan nama file",
-    "menu.includeMetadata": "Copy This Note: sertakan metadata",
-    "menu.bodyOnly": "Copy This Note: hanya isi",
+    "menu.includeFilenameAndMetadata": "Copy this note: sertakan nama file dan metadata",
+    "menu.includeFilename": "Copy this note: sertakan nama file",
+    "menu.includeMetadata": "Copy this note: sertakan metadata",
+    "menu.bodyOnly": "Copy this note: hanya isi",
 
     "settings.enableCopyCommands": "Aktifkan perintah salin",
     "settings.presetDescription":
@@ -386,10 +387,10 @@ const translations = {
     "command.includeMetadata": "메타데이터 포함",
     "command.bodyOnly": "본문만",
 
-    "menu.includeFilenameAndMetadata": "Copy This Note: 파일 이름 및 메타데이터 포함",
-    "menu.includeFilename": "Copy This Note: 파일 이름 포함",
-    "menu.includeMetadata": "Copy This Note: 메타데이터 포함",
-    "menu.bodyOnly": "Copy This Note: 본문만",
+    "menu.includeFilenameAndMetadata": "Copy this note: 파일 이름 및 메타데이터 포함",
+    "menu.includeFilename": "Copy this note: 파일 이름 포함",
+    "menu.includeMetadata": "Copy this note: 메타데이터 포함",
+    "menu.bodyOnly": "Copy this note: 본문만",
 
     "settings.enableCopyCommands": "복사 명령 사용",
     "settings.presetDescription":
@@ -411,10 +412,10 @@ const translations = {
     "command.includeMetadata": "รวมเมตาดาตา",
     "command.bodyOnly": "เฉพาะเนื้อหา",
 
-    "menu.includeFilenameAndMetadata": "Copy This Note: รวมชื่อไฟล์และเมตาดาตา",
-    "menu.includeFilename": "Copy This Note: รวมชื่อไฟล์",
-    "menu.includeMetadata": "Copy This Note: รวมเมตาดาตา",
-    "menu.bodyOnly": "Copy This Note: เฉพาะเนื้อหา",
+    "menu.includeFilenameAndMetadata": "Copy this note: รวมชื่อไฟล์และเมตาดาตา",
+    "menu.includeFilename": "Copy this note: รวมชื่อไฟล์",
+    "menu.includeMetadata": "Copy this note: รวมเมตาดาตา",
+    "menu.bodyOnly": "Copy this note: เฉพาะเนื้อหา",
 
     "settings.enableCopyCommands": "เปิดใช้คำสั่งคัดลอก",
     "settings.presetDescription":

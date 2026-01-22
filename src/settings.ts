@@ -37,11 +37,11 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
     containerEl.empty();
     containerEl.addClass("copy-this-note-settings");
 
-    new Setting(containerEl).setName(t("settings.enableCopyCommands")).setHeading();
-    containerEl.createEl("p", {
-      text: t("settings.presetDescription"),
-      cls: "setting-item-description ctn-settings-preset-description",
-    });
+    new Setting(containerEl)
+      .setClass("ctn-settings-presets-heading")
+      .setName(t("settings.enableCopyCommands"))
+      .setDesc(t("settings.presetDescription"))
+      .setHeading();
     const presetsGroup = containerEl.createDiv("ctn-settings-group");
     for (const preset of COPY_PRESETS) {
       new Setting(presetsGroup)
@@ -75,19 +75,19 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
 
   private displaySupportBanner(containerEl: HTMLElement): void {
     try {
-      containerEl.createEl("div", { cls: "bmc-spacer" });
+      containerEl.createEl("div", { cls: "ctn-bmc-spacer" });
 
-      const supportSection = containerEl.createDiv("bmc-support-section");
+      const supportSection = containerEl.createDiv("ctn-bmc-support-section");
 
       supportSection.createEl("p", {
         text: t("settings.supportMessage"),
-        cls: "bmc-support-message",
+        cls: "ctn-bmc-support-message",
       });
 
       const banner = supportSection.createEl("a", {
         href: BUY_ME_A_COFFEE_URL,
         attr: { target: "_blank", rel: "noopener" },
-        cls: "bmc-banner",
+        cls: "ctn-bmc-banner",
       });
 
       banner.createEl("img", {
