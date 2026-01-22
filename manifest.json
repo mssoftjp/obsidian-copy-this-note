@@ -1,7 +1,7 @@
 {
   "id": "copy-this-note",
   "name": "Copy This Note",
-  "version": "0.0.1",
+  "version": "0.8.0",
   "minAppVersion": "1.8.0",
   "description": "Copy the current note to the clipboard (optionally with filename and frontmatter).",
   "author": "Musashino Software",
