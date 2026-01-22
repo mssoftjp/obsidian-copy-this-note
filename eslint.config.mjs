@@ -9,12 +9,28 @@ const tsconfigRootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig([
   {
-    ignores: ["node_modules/**", "dist/**", "build/**", "releases/**", "spec/**"],
+    ignores: [
+      "node_modules/**",
+      "dist/**",
+      "build/**",
+      "release/**",
+      "releases/**",
+      "spec/**",
+    ],
   },
   {
     files: ["esbuild.config.mjs"],
     languageOptions: {
       globals: {
+        process: "readonly",
+      },
+    },
+  },
+  {
+    files: ["scripts/**/*.mjs"],
+    languageOptions: {
+      globals: {
+        console: "readonly",
         process: "readonly",
       },
     },

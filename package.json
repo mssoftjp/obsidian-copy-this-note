@@ -15,6 +15,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc -p tsconfig.json --noEmit",
+    "verify:release": "node scripts/verify-release.mjs",
+    "release:check": "npm run verify:release && npm run build",
     "check": "npm run lint && npm run typecheck"
   },
   "devDependencies": {

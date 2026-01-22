@@ -20,25 +20,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Verify release version
-        run: |
-          node - <<'NODE'
-          const fs = require("node:fs");
-          const tag = process.env.GITHUB_REF_NAME;
-          const manifest = JSON.parse(fs.readFileSync("manifest.json", "utf8"));
-          if (manifest.version !== tag) {
-            console.error(
-              `manifest.json version (${manifest.version}) does not match tag (${tag}).`
-            );
-            process.exit(1);
-          }
-          const versions = JSON.parse(fs.readFileSync("versions.json", "utf8"));
-          if (versions[tag] !== manifest.minAppVersion) {
-            console.error(
-              `versions.json[${tag}] (${versions[tag]}) does not match manifest minAppVersion (${manifest.minAppVersion}).`
-            );
-            process.exit(1);
-          }
-          NODE
+        run: node scripts/verify-release.mjs
       - run: npm run build
       - name: Prepare release assets
         run: |
