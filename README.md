@@ -12,13 +12,16 @@ Copy a whole Obsidian note to the clipboard as Markdown, without having to selec
 
 ## Context menu examples
 
-Desktop:
-
-![Desktop context menu showing Copy this note presets](docs/images/context-menu-desktop.png)
-
-Mobile:
-
-![Mobile context menu showing Copy this note presets](docs/images/context-menu-mobile.png)
+<table>
+  <tr>
+    <th>Desktop</th>
+    <th>Mobile</th>
+  </tr>
+  <tr>
+    <td style="vertical-align: top;"><img src="docs/images/context-menu-desktop.png" alt="Desktop context menu showing Copy this note presets" width="300" /></td>
+    <td style="vertical-align: top;"><img src="docs/images/context-menu-mobile.png" alt="Mobile context menu showing Copy this note presets" height="515" /></td>
+  </tr>
+</table>
 
 ## When it's useful
 
@@ -183,13 +186,16 @@ Obsidian のノートを Markdown としてクリップボードにコピーす�
 
 ### コンテキストメニューの例
 
-デスクトップ:
-
-![Copy this note のプリセットが表示されるデスクトップのコンテキストメニュー](docs/images/context-menu-desktop.png)
-
-モバイル:
-
-![Copy this note のプリセットが表示されるモバイルのコンテキストメニュー](docs/images/context-menu-mobile.png)
+<table>
+  <tr>
+    <th>デスクトップ</th>
+    <th>モバイル</th>
+  </tr>
+  <tr>
+    <td style="vertical-align: top;"><img src="docs/images/context-menu-desktop.png" alt="Copy this note のプリセットが表示されるデスクトップのコンテキストメニュー" width="300" /></td>
+    <td style="vertical-align: top;"><img src="docs/images/context-menu-mobile.png" alt="Copy this note のプリセットが表示されるモバイルのコンテキストメニュー" height="515" /></td>
+  </tr>
+</table>
 
 ### こんなときに便利
 
