@@ -10,6 +10,16 @@ Copy a whole Obsidian note to the clipboard as Markdown, without having to selec
 - Requires Obsidian 1.8.0+
 - Open source (MIT)
 
+## Context menu examples
+
+Desktop:
+
+![Desktop context menu showing Copy this note presets](docs/images/context-menu-desktop.png)
+
+Mobile:
+
+![Mobile context menu showing Copy this note presets](docs/images/context-menu-mobile.png)
+
 ## When it's useful
 
 - You want to paste a whole note into another app as Markdown (email, docs, issue tracker, chat, etc.)
@@ -33,16 +43,6 @@ The same presets are available from context menus:
 
 - File explorer: right-click a note → `Copy this note: ...`
 - Editor: right-click inside the editor → `Copy this note: ...`
-
-Examples:
-
-Desktop:
-
-![Desktop context menu showing Copy this note presets](docs/images/context-menu-desktop.png)
-
-Mobile:
-
-![Mobile context menu showing Copy this note presets](docs/images/context-menu-mobile.png)
 
 ### Tip: add a hotkey
 
@@ -181,6 +181,16 @@ Obsidian のノートを Markdown としてクリップボードにコピーす�
 - Obsidian 1.8.0+ 対応
 - OSS（MIT）
 
+### コンテキストメニューの例
+
+デスクトップ:
+
+![Copy this note のプリセットが表示されるデスクトップのコンテキストメニュー](docs/images/context-menu-desktop.png)
+
+モバイル:
+
+![Copy this note のプリセットが表示されるモバイルのコンテキストメニュー](docs/images/context-menu-mobile.png)
+
 ### こんなときに便利
 
 - ノートを Markdown のまま他のアプリへ貼り付けたい（メール、ドキュメント、チケット、チャットなど）
@@ -204,16 +214,6 @@ Obsidian のノートを Markdown としてクリップボードにコピーす�
 
 - ファイルエクスプローラ: ノートを右クリック → `Copy this note: ...`
 - エディタ: エディタ内で右クリック → `Copy this note: ...`
-
-例:
-
-デスクトップ:
-
-![Copy this note のプリセットが表示されるデスクトップのコンテキストメニュー](docs/images/context-menu-desktop.png)
-
-モバイル:
-
-![Copy this note のプリセットが表示されるモバイルのコンテキストメニュー](docs/images/context-menu-mobile.png)
 
 #### ヒント: ホットキーを割り当てる
 
