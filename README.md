@@ -31,8 +31,18 @@ Run one of these commands:
 
 The same presets are available from context menus:
 
-- File explorer: right-click a note → `Copy This Note: ...`
-- Editor: right-click inside the editor → `Copy This Note: ...`
+- File explorer: right-click a note → `Copy this note: ...`
+- Editor: right-click inside the editor → `Copy this note: ...`
+
+Examples:
+
+Desktop:
+
+![Desktop context menu showing Copy this note presets](docs/images/context-menu-desktop.png)
+
+Mobile:
+
+![Mobile context menu showing Copy this note presets](docs/images/context-menu-mobile.png)
 
 ### Tip: add a hotkey
 
@@ -192,8 +202,18 @@ Obsidian のノートを Markdown としてクリップボードにコピーす�
 
 同じプリセットをコンテキストメニューから実行できます:
 
-- ファイルエクスプローラ: ノートを右クリック → `Copy This Note: ...`
-- エディタ: エディタ内で右クリック → `Copy This Note: ...`
+- ファイルエクスプローラ: ノートを右クリック → `Copy this note: ...`
+- エディタ: エディタ内で右クリック → `Copy this note: ...`
+
+例:
+
+デスクトップ:
+
+![Copy this note のプリセットが表示されるデスクトップのコンテキストメニュー](docs/images/context-menu-desktop.png)
+
+モバイル:
+
+![Copy this note のプリセットが表示されるモバイルのコンテキストメニュー](docs/images/context-menu-mobile.png)
 
 #### ヒント: ホットキーを割り当てる
 
