@@ -7,9 +7,13 @@ function readJson(filePath) {
 const manifest = readJson("manifest.json");
 const versions = readJson("versions.json");
 
+function isVersionTag(value) {
+  return /^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$/.test(value);
+}
+
 const argvTag = process.argv[2];
 const envTag = process.env.GITHUB_REF_NAME || process.env.TAG;
-const expectedTag = argvTag || envTag || manifest.version;
+const expectedTag = argvTag || (envTag && isVersionTag(envTag) ? envTag : manifest.version);
 
 if (typeof expectedTag !== "string" || expectedTag.trim() === "") {
   console.error(
@@ -31,4 +35,3 @@ if (versions[expectedTag] !== manifest.minAppVersion) {
   );
   process.exit(1);
 }
-
