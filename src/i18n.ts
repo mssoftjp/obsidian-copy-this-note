@@ -1,3 +1,5 @@
+import { getLanguage } from "obsidian";
+
 const EN_LOCALE = "en" as const;
 
 export type SupportedLocale =
@@ -433,18 +435,6 @@ const translations = {
   },
 } satisfies Record<SupportedLocale, I18nDictionary>;
 
-function getObsidianLocaleTag(): string | null {
-  try {
-    if (typeof document !== "undefined" && document.documentElement?.lang) {
-      return document.documentElement.lang;
-    }
-  } catch {
-    // Ignore.
-  }
-
-  return null;
-}
-
 export function resolveSupportedLocale(rawLocaleTag?: string | null): SupportedLocale {
   const localeTag = (rawLocaleTag ?? "").trim();
   if (!localeTag) return EN_LOCALE;
@@ -493,6 +483,6 @@ export function resolveSupportedLocale(rawLocaleTag?: string | null): SupportedL
 }
 
 export function t(key: I18nKey, locale?: SupportedLocale): string {
-  const resolvedLocale = locale ?? resolveSupportedLocale(getObsidianLocaleTag());
+  const resolvedLocale = locale ?? resolveSupportedLocale(getLanguage());
   return translations[resolvedLocale][key] ?? translations[EN_LOCALE][key] ?? key;
 }

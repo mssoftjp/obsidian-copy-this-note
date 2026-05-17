@@ -75,7 +75,7 @@ export class CopyThisNoteSettingTab extends PluginSettingTab {
 
   private displaySupportBanner(containerEl: HTMLElement): void {
     try {
-      containerEl.createEl("div", { cls: "ctn-bmc-spacer" });
+      containerEl.createDiv({ cls: "ctn-bmc-spacer" });
 
       const supportSection = containerEl.createDiv("ctn-bmc-support-section");
 

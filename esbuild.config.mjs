@@ -4,6 +4,7 @@ import path from "node:path";
 
 const isProduction = process.argv.includes("production");
 const isWatch = process.argv.includes("--watch");
+const isDeployDisabled = process.argv.includes("--no-deploy");
 
 async function loadDotenvIfPresent(dotenvPath = path.join(process.cwd(), ".env")) {
   try {
@@ -45,6 +46,8 @@ async function fileExists(filePath) {
 }
 
 async function deployToObsidianPluginsDir() {
+  if (isDeployDisabled) return;
+
   const pluginsDir = process.env.OBSIDIAN_PLUGINS_DIR;
   if (!pluginsDir) return;
 

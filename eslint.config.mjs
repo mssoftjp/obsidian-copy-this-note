@@ -37,6 +37,15 @@ export default defineConfig([
   },
   ...obsidianmd.configs.recommended,
   {
+    rules: {
+      "obsidianmd/no-plugin-as-component": "off",
+      "obsidianmd/no-unsupported-api": "off",
+      "obsidianmd/no-view-references-in-plugin": "off",
+      "obsidianmd/prefer-file-manager-trash-file": "off",
+      "obsidianmd/prefer-instanceof": "off",
+    },
+  },
+  {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parser: tsParser,
@@ -50,6 +59,13 @@ export default defineConfig([
         navigator: "readonly",
         window: "readonly",
       },
+    },
+    rules: {
+      "obsidianmd/no-plugin-as-component": "error",
+      "obsidianmd/no-unsupported-api": "error",
+      "obsidianmd/no-view-references-in-plugin": "error",
+      "obsidianmd/prefer-file-manager-trash-file": "warn",
+      "obsidianmd/prefer-instanceof": "error",
     },
   },
 ]);
